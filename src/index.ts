@@ -16,5 +16,15 @@ let values: number[] = [1, 2, 3, 4, 5];
 let listOfNames: string[] = ["James", "Belle", "Brutus", "Joseph", "Hens"];
 // values.push("Robert"); this will return an error "string cannot be assigned to a number"
 // listOfNames.push(6); this will return an error "number cannot be assigned to a string"
+
 //Tuple
 let listOfThings: [string, number, boolean] = ["Wilson", 28, true]; //tuples allows the creation of arrays with various types of data and a limit of elements
+
+//Enum
+enum GuildRole {paladin = 0, bruiser = 1, assassin = 2, mage = 3, healer = 4};
+
+const user: object = {
+    userName: "Akarui",
+    playerLvl: 20,
+    guildRole: GuildRole.mage
+}; //enum allows the numeration of various names such as roles of an user
