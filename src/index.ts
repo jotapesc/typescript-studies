@@ -39,3 +39,9 @@ function sumTwoNum(num1: number, num2: number): number {
   //specifying the type of both return and params
   return num1 + num2;
 }
+
+//Objects
+const player = {
+    nickname: "Hoshimi Miyabi Enjoyer",
+    hitPoints: 20000
+}
