@@ -28,3 +28,8 @@ const user: object = {
     playerLvl: 20,
     guildRole: GuildRole.mage
 }; //enum allows the numeration of various names such as roles of an user
+
+//Function return
+function sumTwoNum(num1: number, num2: number): number { //specifying the type of both return and params
+    return num1 + num2;
+}
