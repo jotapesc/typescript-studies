@@ -57,3 +57,13 @@ let charName: string;
 if (playerName === "string") {
   charName = playerName; //like here
 }
+
+//Never
+function generateError(message: string, code: number): never { //this will never return any value
+  throw {
+    message: message,
+    errorCode: code,
+  };
+}
+
+console.log(generateError("I'm a teapot", 418));
