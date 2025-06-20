@@ -43,6 +43,17 @@ function sumTwoNum(num1: number, num2: number): number {
 //Objects
 const player = {
   nickname: "Hoshimi Miyabi Enjoyer",
-  hitPoints: 20000
+  hitPoints: 20000,
 };
 
+//Unknow
+let playerName: unknown; //unknow is a "temporary any", and can have a type later on
+playerName = 10;
+playerName = undefined;
+playerName = "Wallace"; //here the "any" property can really shine
+
+let charName: string;
+
+if (playerName === "string") {
+  charName = playerName; //like here
+}
