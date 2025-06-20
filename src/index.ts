@@ -42,6 +42,7 @@ function sumTwoNum(num1: number, num2: number): number {
 
 //Objects
 const player = {
-    nickname: "Hoshimi Miyabi Enjoyer",
-    hitPoints: 20000
-}
+  nickname: "Hoshimi Miyabi Enjoyer",
+  hitPoints: 20000
+};
+
