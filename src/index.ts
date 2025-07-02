@@ -67,3 +67,16 @@ function generateError(message: string, code: number): never { //this will never
 }
 
 console.log(generateError("I'm a teapot", 418));
+
+//Alias
+type Player = { 
+  nickname: string,
+  age: number,
+  isOnline: boolean,
+} //Pretty similar to an interface
+
+const players: Player = {
+  nickname: "Ryoshu Enjoyer",
+  age: 27,
+  isOnline: false,
+}
