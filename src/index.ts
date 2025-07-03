@@ -80,3 +80,12 @@ const players: Player = {
   age: 27,
   isOnline: false,
 }
+
+// Union type
+let nameOrNumber: string | number = 12; //this variable can receive two different types
+
+if (typeof nameOrNumber === "number") { //to use one of them, just check it's type
+  console.log((nameOrNumber += 3));
+} else if (typeof nameOrNumber === "string") {
+  console.log(nameOrNumber);
+}
