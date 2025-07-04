@@ -66,7 +66,7 @@ function generateError(message: string, code: number): never { //this will never
   };
 }
 
-console.log(generateError("I'm a teapot", 418));
+//console.log(generateError("I'm a teapot", 418));
 
 //Alias
 type Player = { 
@@ -89,3 +89,13 @@ if (typeof nameOrNumber === "number") { //to use one of them, just check it's ty
 } else if (typeof nameOrNumber === "string") {
   console.log(nameOrNumber);
 }
+
+// Literal
+let playerMaxHp: 20000;
+let playerGuildRole: "paladin" | "bruiser" | "assassin" | "mage" | "healer";
+
+console.log(`Max HP: ${playerMaxHp = 20000} 
+Guild Role: ${playerGuildRole = "healer"}`);
+
+// playerMaxHp = 20001; not assignable because playerMaxHp's type is literally 20000
+// playerGuildRole = GuildRole.healer; not assignable because GuildRole.healer it's a number
