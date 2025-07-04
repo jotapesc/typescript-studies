@@ -99,3 +99,34 @@ Guild Role: ${playerGuildRole = "healer"}`);
 
 // playerMaxHp = 20001; not assignable because playerMaxHp's type is literally 20000
 // playerGuildRole = GuildRole.healer; not assignable because GuildRole.healer it's a number
+
+// Intersection
+
+type Stats = {
+  hitPoints: number,
+  manaPoints: number,
+  CharacterLevel: number,
+  debuffs: "Bleed" | "Burn" | "Poison" | "None",
+  hungerLevel: "Satiated" | "Hungry" | "Starving",
+};
+
+type Equipment = {
+  helmet: boolean,
+  chestPlate: boolean,
+  leggings: boolean,
+  boots: boolean,
+};
+
+type Character = Stats & Equipment;
+
+let char1: Character = {
+  hitPoints: 20000,
+  manaPoints: 10000,
+  CharacterLevel: 57,
+  debuffs: "None",
+  hungerLevel: "Satiated",
+  helmet: false,
+  chestPlate: true,
+  leggings: true,
+  boots: false,
+};
