@@ -1,7 +1,7 @@
 let names = "joão";
 let arr: string[];
 let obj: object = {};
-let float: number;
+let floatNum: number;
 let num: number;
 
 //Any
@@ -59,7 +59,8 @@ if (playerName === "string") {
 }
 
 //Never
-function generateError(message: string, code: number): never { //this will never return any value
+function generateError(message: string, code: number): never {
+  //this will never return any value
   throw {
     message: message,
     errorCode: code,
@@ -69,22 +70,23 @@ function generateError(message: string, code: number): never { //this will never
 //console.log(generateError("I'm a teapot", 418));
 
 //Alias
-type Player = { 
-  nickname: string,
-  age: number,
-  isOnline: boolean,
-} //Pretty similar to an interface
+type Player = {
+  nickname: string;
+  age: number;
+  isOnline: boolean;
+}; //Pretty similar to an interface
 
 const players: Player = {
   nickname: "Ryoshu Enjoyer",
   age: 27,
   isOnline: false,
-}
+};
 
 // Union type
 let nameOrNumber: string | number = 12; //this variable can receive two different types
 
-if (typeof nameOrNumber === "number") { //to use one of them, just check it's type
+if (typeof nameOrNumber === "number") {
+  //to use one of them, just check it's type
   console.log((nameOrNumber += 3));
 } else if (typeof nameOrNumber === "string") {
   console.log(nameOrNumber);
@@ -94,8 +96,8 @@ if (typeof nameOrNumber === "number") { //to use one of them, just check it's ty
 let playerMaxHp: 20000;
 let playerGuildRole: "paladin" | "bruiser" | "assassin" | "mage" | "healer";
 
-console.log(`Max HP: ${playerMaxHp = 20000} 
-Guild Role: ${playerGuildRole = "healer"}`);
+console.log(`Max HP: ${(playerMaxHp = 20000)} 
+Guild Role: ${(playerGuildRole = "healer")}`);
 
 // playerMaxHp = 20001; not assignable because playerMaxHp's type is literally 20000
 // playerGuildRole = GuildRole.healer; not assignable because GuildRole.healer it's a number
@@ -103,18 +105,18 @@ Guild Role: ${playerGuildRole = "healer"}`);
 // Intersection
 
 type Stats = {
-  hitPoints: number,
-  manaPoints: number,
-  CharacterLevel: number,
-  debuffs: "Bleed" | "Burn" | "Poison" | "None",
-  hungerLevel: "Satiated" | "Hungry" | "Starving",
+  hitPoints: number;
+  manaPoints: number;
+  CharacterLevel: number;
+  debuffs: "Bleed" | "Burn" | "Poison" | "None";
+  hungerLevel: "Satiated" | "Hungry" | "Starving";
 };
 
 type Equipment = {
-  helmet: boolean,
-  chestPlate: boolean,
-  leggings: boolean,
-  boots: boolean,
+  helmet: boolean;
+  chestPlate: boolean;
+  leggings: boolean;
+  boots: boolean;
 };
 
 type Character = Stats & Equipment;
