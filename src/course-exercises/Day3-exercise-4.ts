@@ -33,7 +33,7 @@ const binary: number = 0b1010011010;
 const octal: number = 0o744;
 const negZero: number = -0;
 const actuallyNumber: number = NaN;
-const largestNumber:number = Number.MAX_VALUE;
+const largestNumber: number = Number.MAX_VALUE;
 const mostBiglyNumber: number = Infinity;
 
 const members: number[] = [
@@ -45,7 +45,7 @@ const members: number[] = [
   negZero,
   actuallyNumber,
   largestNumber,
-  mostBiglyNumber
+  mostBiglyNumber,
 ];
 
 members[0] = 12345;

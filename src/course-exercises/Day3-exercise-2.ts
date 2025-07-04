@@ -6,6 +6,6 @@
 // console.log(`I like to eat ${pie}-flavored pie.`)
 
 let pie: string; //pie didn't have a type defined
-pie = "blueberry"
+pie = "blueberry";
 
 console.log(`I like to eat ${pie}-flavored pie.`);
