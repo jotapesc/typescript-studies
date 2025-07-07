@@ -132,3 +132,41 @@ let char1: Character = {
   leggings: true,
   boots: false,
 };
+
+// Classes
+interface Users {
+  name: string;
+  balance: number;
+  constructor(name: string, balance: number): Users;
+  addMoney(amount: number):void;
+  withdrawMoney(amount: number):void;
+  usersFactory(name: string, balance: number): Users;
+}
+class Users {
+  name: string;
+  balance: number;
+
+  private constructor(name: string, balance: number) {
+    this.name = name;
+    this.balance = balance;
+  }
+  
+  addMoney(amount: number):void {
+    this.balance += amount;
+  }
+
+  withdrawMoney(amount: number):void {
+    this.balance -= amount;
+  }
+
+  public usersFactory (name: string, balance: number) {
+    return new Users(name, balance);
+  }
+}
+
+const user1 = Users.prototype.usersFactory("John", 100);
+console.log(user1);
+user1.addMoney(400);
+console.log(`Saldo: ${user1.balance}`);
+user1.withdrawMoney(250)
+console.log(`Saldo: ${user1.balance}`);
