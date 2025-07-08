@@ -170,3 +170,15 @@ user1.addMoney(400);
 console.log(`Saldo: ${user1.balance}`);
 user1.withdrawMoney(250)
 console.log(`Saldo: ${user1.balance}`);
+
+// Readonly
+class Movies {
+  readonly id: number; //can still be accessed out of the class, but cannot be changed
+  //private id: number; //can't be accessed out of the class and neither be changed
+  public name: string;
+  
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+}
