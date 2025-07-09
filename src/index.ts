@@ -182,3 +182,16 @@ class Movies {
     this.name = name;
   }
 }
+
+// Index Signatures
+class restaurantTables {
+  [tableTag: string]: string; //it's possible to define properties dynamically
+}
+
+let table = new restaurantTables();
+
+table.A10 = "Fernando";
+table.B01 = "Gauss";
+table.E13 = "Wallace";
+
+console.log(table);
