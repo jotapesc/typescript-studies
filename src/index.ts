@@ -146,7 +146,7 @@ class Users {
   name: string;
   balance: number;
 
-  private constructor(name: string, balance: number) {
+  constructor(name: string, balance: number) {
     this.name = name;
     this.balance = balance;
   }
@@ -195,3 +195,24 @@ table.B01 = "Gauss";
 table.E13 = "Wallace";
 
 console.log(table);
+
+// Inheritance
+class SpecialClient extends Users {
+  constructor(public id: number, public name: string, readonly luckyNumber: number, readonly balance: number) {
+    super(name, balance);
+  }
+
+  public luckyDraw(id: number, name: string, luckyNumber: number) {
+    if (id === luckyNumber) {
+      console.log(`Congratulations ${name} you won $100,000`);
+      this.addMoney(100000);
+      return;
+    } 
+    return;
+  }
+}
+
+const specialClient = new SpecialClient(812903, "Olga Petrov", 812903, 100000);
+
+specialClient.luckyDraw(specialClient.id, specialClient.name, specialClient.luckyNumber);
+console.log(`Your new balance is: ${specialClient.balance}`);
