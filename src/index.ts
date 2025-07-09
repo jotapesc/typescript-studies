@@ -200,7 +200,7 @@ console.log(table);
 class SpecialClient extends Users {
   constructor(public id: number, public name: string, readonly luckyNumber: number, readonly balance: number) {
     super(name, balance);
-  }
+  };
 
   public luckyDraw(id: number, name: string, luckyNumber: number) {
     if (id === luckyNumber) {
@@ -209,10 +209,27 @@ class SpecialClient extends Users {
       return;
     } 
     return;
-  }
-}
+  };
+};
 
 const specialClient = new SpecialClient(812903, "Olga Petrov", 812903, 100000);
 
 specialClient.luckyDraw(specialClient.id, specialClient.name, specialClient.luckyNumber);
 console.log(`Your new balance is: ${specialClient.balance}`);
+
+// Override
+class SuperSpecialClient extends SpecialClient {
+  override luckyDraw(id: number, name: string, luckyNumber: number): void {
+    if (id === luckyNumber) {
+      console.log(`Congratulations ${name} you won $200,000`);
+      this.addMoney(200000);
+      return;
+    } 
+    return;
+  };
+  }
+
+const superSpecialClient = new SuperSpecialClient(238490, "Sofia Alisa del Jesus Guadalupe", 238490, 500000);
+
+superSpecialClient.luckyDraw(superSpecialClient.id, superSpecialClient.name, superSpecialClient.luckyNumber);
+console.log(`Your new balance is: ${superSpecialClient.balance}`);
